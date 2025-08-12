@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xxVPN + Supabase</title>
+</head>
 <body>
   <h1>xxVPN + Supabase</h1>
 
@@ -11,5 +18,24 @@
   <div id="msg" role="status" style="margin-top:10px;"></div>
   <pre id="out"></pre>
 
+  <section style="margin-top:16px">
+    <h3>Seed (offline)</h3>
+    <button id="gen-btn">Generate 24-word seed</button>
+    <p style="color:#b00;margin:8px 0;">
+      Save these 24 words somewhere safe. Do NOT share or screenshot.
+    </p>
+    <textarea id="seed-out" rows="3" cols="80" readonly></textarea>
+
+    <div style="margin-top:10px">
+      <button id="derive-btn">Derive public key from seed</button>
+    </div>
+    <div style="margin-top:8px">
+      <label>Public key (hex):</label><br />
+      <textarea id="pubkey-out" rows="2" cols="80" readonly></textarea>
+    </div>
+  </section>
+
+  <hr />
   <script type="module" src="/main.js"></script>
 </body>
+</html>
